@@ -8,15 +8,15 @@ var saltando = false
 function StartJump(){
     if(onGround)
     {
-        velocityY = -12.0;
+        velocityY = -14.0;
         onGround = false;
 		saltando = true;
     }
 }
 
 function EndJump(){
-    if(velocityY < -6.0)
-        velocityY = -6.0;
+    if(velocityY < -7.0)
+        velocityY = -7.0;
 }
 
 function Update(){
