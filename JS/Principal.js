@@ -9,8 +9,15 @@ var BackgroundImage = new Image();		//Imagen del mapa
 var AllImage = new Image();				//Sprite con todas las imagenes
 var mario;		//		Objeto Mario Bross
 var fondo;
+var vidas = 3;
 
 $(document).ready(function(){
+	startFunction();
+	comienzaTiempo();
+	window.requestAnimationFrame(draw);
+});
+
+function startFunction(){
 	pantallaAncho = screen.width;
 	pantallaAlto = window.innerHeight || document.body.clientHeight
 	$("#lienzo").attr("width", (pantallaAncho/100)*60-6);		//ancho automático para la zona de juego
@@ -31,7 +38,7 @@ $(document).ready(function(){
 			Y : altoLienzo*0.81,
 			Ancho : anchoLienzo/25,
 			Alto : altoLienzo/12,
-			Vida : 3,
+			Vida : vidas,
 			Disfraz : 1,
 			Power : 0
 		});
@@ -39,9 +46,8 @@ $(document).ready(function(){
 		mario.dibujaMario();
 	}
 	crearPlataformas();
-	
-	window.requestAnimationFrame(draw);
-});
+	time = 300;
+}
 
 function draw(){
 	fondo.dibujaFondo();
@@ -49,6 +55,12 @@ function draw(){
 	mario.dibujaMario();
 	Update();
 	pisaBloque();
+	dibujaTextos();
+	
+	if(mario.Y > altoLienzo+mario.Alto){
+		vidas--;
+		startFunction();
+	}
 	//console.log("fondoX = "+fondo.X+"   marioX = "+mario.X);
 	window.requestAnimationFrame(draw);
 }

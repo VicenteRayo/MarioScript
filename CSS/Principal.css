@@ -3,6 +3,11 @@ html, body {
 	margin: 0px;
 }
 
+@font-face {
+    font-family: PixelEmulator;
+    src: url(PixelEmulator.otf);
+}
+
 #TopArea{
 	height:10%;
 	width:100%;
@@ -49,3 +54,4 @@ html, body {
 	border-style:solid;
 	border-width:3px;
 }
+

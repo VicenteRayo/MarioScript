@@ -1,6 +1,6 @@
 var floor;
 var velocityY = 0.0;
-var gravity = 0.5;
+var gravity = 0.4;
 var onGround = false;
 var saltando = false
 
