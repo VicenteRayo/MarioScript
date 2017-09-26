@@ -21,5 +21,7 @@ function dibujaTextos(){
 	canvas.fillText("MARIO",anchoLienzo*0.07,altoLienzo*0.05); 	//Puntos
 	canvas.fillText(puntos,anchoLienzo*0.07,altoLienzo*0.05+30); 
 	
-	canvas.drawImage(AllImage, 6, 8, 13, 16, anchoLienzo*0.4, altoLienzo*0.01, mario.Ancho/2, mario.Alto/2);
+	canvas.drawImage(AllImage, 6, 8, 13, 16, anchoLienzo*0.4, altoLienzo*0.035, mario.Ancho/1.5, mario.Alto/1.5);
+	canvas.fillText("x",anchoLienzo*0.45,altoLienzo*0.05+30);
+	canvas.fillText(vidas,anchoLienzo*0.5,altoLienzo*0.05+30);
 }

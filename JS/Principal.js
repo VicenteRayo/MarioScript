@@ -27,8 +27,8 @@ function startFunction(){
 	floor = altoLienzo*0.81;
 	canvas = document.getElementById("lienzo").getContext("2d");
 	
-	BackgroundImage.src = "./Images/map.png";
-	AllImage.src = "./Images/sprite.png"
+	BackgroundImage.src = "./Resources/Images/map.png";
+	AllImage.src = "./Resources/Images/sprite.png"
 	coeficienteDibujo = altoLienzo / altoMapa;
 	BackgroundImage.onload = function(){
 		fondo = new Fondo();
